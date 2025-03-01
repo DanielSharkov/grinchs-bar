@@ -2,33 +2,35 @@
 export let SoundAudioContext: AudioContext;
 export let MusicAudioContext: AudioContext;
 
+const urlBasePath = import.meta.env.VITE_BASE_URL || '/';
+
 type SoundType =
 	| 'gunShot' | 'playerDead' | 'revolverClear' | 'revolverSpin' | 'liar' | 'gong' | 'cardsFlip'
 	| 'whoosh' | 'deepWhoosh' | 'cardSpinWhoosh' | 'singleCardFlip';
 export const soundURL: {[K in SoundType]: string} = {
-	gunShot: '/sound/gun_shot.mp3',
-	playerDead: '/sound/player_game_over.mp3',
-	revolverClear: '/sound/revolver_clear.mp3',
-	revolverSpin: '/sound/revolver_spin.mp3',
-	liar: '/sound/liar.mp3',
-	gong: '/sound/gong.mp3',
-	cardsFlip: '/sound/cards_flip.mp3',
-	whoosh: '/sound/whoosh.mp3',
-	deepWhoosh: '/sound/deep_whoosh.mp3',
-	cardSpinWhoosh: '/sound/card_spin_whoosh.mp3',
-	singleCardFlip: '/sound/single_card_flip.mp3',
+	gunShot: 'sound/gun_shot.mp3',
+	playerDead: 'sound/player_game_over.mp3',
+	revolverClear: 'sound/revolver_clear.mp3',
+	revolverSpin: 'sound/revolver_spin.mp3',
+	liar: 'sound/liar.mp3',
+	gong: 'sound/gong.mp3',
+	cardsFlip: 'sound/cards_flip.mp3',
+	whoosh: 'sound/whoosh.mp3',
+	deepWhoosh: 'sound/deep_whoosh.mp3',
+	cardSpinWhoosh: 'sound/card_spin_whoosh.mp3',
+	singleCardFlip: 'sound/single_card_flip.mp3',
 };
 export function playSound(soundType: keyof typeof soundURL): void {
-	const audioEl = new Audio(soundURL[soundType])
+	const audioEl = new Audio(urlBasePath + soundURL[soundType])
 	SoundAudioContext.createMediaElementSource(audioEl).connect(SoundAudioContext.destination);
 	audioEl.play().then(() => audioEl.remove());
 }
 
 type MusicType = 'gameStart' | 'gameEnd' | 'intro';
 const musics: {[K in MusicType]: HTMLAudioElement} = {
-	gameStart: new Audio('/music/game_start.mp3'),
-	gameEnd: new Audio('/music/game_end.mp3'),
-	intro: new Audio('/music/intro.mp3'),
+	gameStart: new Audio(urlBasePath + 'music/game_start.mp3'),
+	gameEnd: new Audio(urlBasePath + 'music/game_end.mp3'),
+	intro: new Audio(urlBasePath + 'music/intro.mp3'),
 }
 export function playMusic(soundType: keyof typeof musics, resume?: true): Promise<void> {
 	if (resume !== true) {
