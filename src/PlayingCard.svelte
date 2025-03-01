@@ -7,8 +7,8 @@ export let flipped = false;
 </script>
 
 <div class="playing-card" class:flipped>
-	<div class="front" style="background-image: url('/playing_card/{cardType}.png')"></div>
-	<div class="back" style="background-image: url('/playing_card/back.png')"></div>
+	<div class="front" style="background-image: url('playing_card/{cardType}.png')"></div>
+	<div class="back" style="background-image: url('playing_card/back.png')"></div>
 	{#if count !== undefined}
 		<span class="playing-card-count" transition:zoomAnim|global={{ duration: 500 }}>{ count }</span>
 	{/if}

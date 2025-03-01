@@ -88,7 +88,7 @@ out:fade|global={{ easing: cubicInOut, duration: 1000 }}>
 		style:top="{posY}%"
 		style:transform="rotate({rotate}deg)"
 		in:cardInAnim|global={{rotate, cardIndex}}>
-			<div class="front" style:background-image="url('/playing_card/{card || 'back'}.png')"></div>
+			<div class="front" style:background-image="url('playing_card/{card || 'back'}.png')"></div>
 		</div>
 	{/each}
 </div>

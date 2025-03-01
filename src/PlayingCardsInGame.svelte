@@ -110,8 +110,8 @@ function playersAreReady() {
 					out:cardOutAnim|global={{cardIndex}}
 					class:flipped={$cardsState[cardIndex][0]}
 					style:z-index={cardsCount - cardIndex}>
-						<div class="front" style="background-image: url('/playing_card/{cardType}.png')"></div>
-						<div class="back" style="background-image: url('/playing_card/back.png')"></div>
+						<div class="front" style="background-image: url('playing_card/{cardType}.png')"></div>
+						<div class="back" style="background-image: url('playing_card/back.png')"></div>
 						{#if $cardsState[cardIndex][1]}
 							<span class="playing-card-count" in:zoomAnim|global={{ duration: 1000, easing: easeOutBack }}>
 								{ cardCount }

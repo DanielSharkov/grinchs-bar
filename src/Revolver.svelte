@@ -121,8 +121,8 @@ function devilCardZoomAnim(_: Element): TransitionConfig {
 				in:devilCardZoomAnim|global
 				out:fade|global={{ easing: cubicInOut, duration: 500 }}>
 					<div class="playing-card">
-						<div class="front" style="background-image: url('/playing_card/Devil.png')"></div>
-						<div class="back" style="background-image: url('/playing_card/back.png')"></div>
+						<div class="front" style="background-image: url('playing_card/Devil.png')"></div>
+						<div class="back" style="background-image: url('playing_card/back.png')"></div>
 					</div>
 				</div>
 			</div>

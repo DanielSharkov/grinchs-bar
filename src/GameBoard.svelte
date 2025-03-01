@@ -100,8 +100,8 @@ function playerWonAnim(playerCardEl: HTMLElement, { isWinner, playerIndex }: { i
 		<div id="CardOfTheRound" in:cardOfGameAnim|global>
 			<div class="playing-card-wrapper" class:new-card-anim={$cardOfTheRoundNewCardAnim}>
 				<div class="playing-card" class:flipped={$cardOfTheRoundFlipped}>
-					<div class="front" style="background-image: url('/playing_card/{$cardOfTheRound}.png')"></div>
-					<div class="back" style="background-image: url('/playing_card/back.png')"></div>
+					<div class="front" style="background-image: url('playing_card/{$cardOfTheRound}.png')"></div>
+					<div class="back" style="background-image: url('playing_card/back.png')"></div>
 				</div>
 			</div>
 		</div>
