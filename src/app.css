@@ -18,7 +18,7 @@
 	color-scheme: dark;
 	color: #fff;
 	background-color: #2a0910;
-	background-image: url('/app_bg.svg');
+	background-image: url(/app_bg.svg);
 	background-size: 200px;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -67,7 +67,7 @@ html::after {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url('/film_grain.png');
+	background-image: url(/film_grain.png);
 	background-repeat: repeat;
 	animation: filmGrain 0.2s steps(1) alternate infinite;
 }
