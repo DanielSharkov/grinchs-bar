@@ -1,0 +1,257 @@
+@font-face {
+	font-family: 'Chau Philomene One';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url(/public/ChauPhilomeneOne-Italic.ttf);
+}
+@font-face {
+	font-family: 'Chau Philomene One';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(/public/ChauPhilomeneOne-Regular.ttf);
+}
+
+:root {
+	font-family: 'Chau Philomene One';
+	color-scheme: dark;
+	color: #fff;
+	background-color: #2a0910;
+	background-image: url('/app_bg.svg');
+	background-size: 200px;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+* {
+	font-family: inherit;
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	color: inherit;
+	outline: none;
+	box-sizing: border-box;
+}
+*:before, *:after {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	color: inherit;
+	outline: none;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	scrollbar-gutter: stable;
+	overscroll-behavior: none;
+}
+
+html::after {
+	content: '';
+	pointer-events: none;
+	z-index: 999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('/film_grain.png');
+	background-repeat: repeat;
+	animation: filmGrain 0.2s steps(1) alternate infinite;
+}
+@keyframes filmGrain {
+	0% { background-position: 0px }
+	33.33% { background-position: 4px 0 }
+	66.66% { background-position: 4px }
+	100% { background-position: 0px 4px }
+}
+
+button.button-3d {
+	touch-action: manipulation;
+	-webkit-appearance: none;
+	appearance: none;
+	vertical-align: middle;
+	font: inherit;
+	background: transparent;
+	padding: 0;
+	margin: 0;
+	text-align: inherit;
+	text-transform: inherit;
+	box-sizing: border-box;
+	line-height: 1;
+
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	transition-property: border-color, transform, background-color;
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0.55, 1, 0.15, 1);
+	will-change: transform;
+	cursor: pointer;
+
+	border-color: #d1bca1;
+	background-color: #ecd8b6;
+	background-image: radial-gradient(75% 25% at 50% 5%, #fff, transparent);
+	--shadow: '';
+	box-shadow: inset 0 0 2px 1px #fff, 0 1px 4px 1px rgba(0, 0, 0, 0.1), var(--shadow);
+	color: #544535;
+	overflow: hidden;
+}
+
+button.button-3d.small {
+	padding: 0.5rem;
+}
+
+button.button-3d[disabled] {
+	border-color: #afafaf;
+	background-color: #d1d1d1;
+	background-image: radial-gradient(75% 25% at 50% 5%, #fff, transparent);
+	box-shadow: inset 0 0 2px 1px #dadada, 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+	color: #8b8b8b;
+	text-shadow: 0 0 1px #fff;
+}
+
+button.button-3d.red:not([disabled]) {
+	border-color: #e55c3e;
+	background-color: #ffa69e;
+	background-image: radial-gradient(75% 25% at 50% 5%, #ffffff, transparent);
+	box-shadow: inset 0 0 2px 1px #ffcabe, 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+	text-shadow: 0 1px 1px #ffaa97, 0 1px 3px #dbaea4;
+	color: #b11913;
+}
+
+button.button-3d.green:not([disabled]) {
+	border-color: #a3c27d;
+	background-color: #d6ffb4;
+	background-image: radial-gradient(75% 25% at 50% 5%, #ffffff, transparent);
+	box-shadow: inset 0 0 2px 1px #f6fff2, 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+	text-shadow: 0 1px 1px #acff8b, 0 1px 3px #b4cea9;
+	color: #397236;
+}
+
+button.button-3d.solid-green:not([disabled]) {
+	position: relative;
+	border-color: #4b6827;
+	background-color: #5c9d27;
+	background-image: none;
+	box-shadow: inset 0 0 2px 1px #87c769, 0 1px 4px 1px rgba(0, 0, 0, 0.1);
+	text-shadow: 0 1px 1px #acff8b, 0 1px 3px #174007;
+	color: #eaffe9;
+}
+
+button.button-3d.solid-green:not([disabled])::before, button.button-3d.solid-green:not([disabled])::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+button.button-3d.solid-green:not([disabled])::before {
+	background-image: radial-gradient(75% 25% at 50% 0%, #caffb1, #7ec95c 50%, transparent);
+}
+button.button-3d.solid-green:not([disabled])::after {
+	background-image: radial-gradient(100% 25% at 50% 100%, #257600, transparent);
+}
+
+button.button-3d:focus:not([disabled]) {
+	outline-style: solid;
+	outline-color: transparent;
+}
+
+@media (hover: hover) {
+	button.button-3d:hover:not([disabled]) {
+		transform: scale(1.1);
+	}
+}
+button.button-3d:focus-visible:not(.no-underline):not([disabled]),
+button.button-3d:hover:not(.no-underline):not([disabled]) {
+	transform: scale(1.1);
+	text-decoration-line: underline;
+	text-decoration-thickness: 0.0625em;
+	text-underline-offset: 0.125em;
+}
+
+button.button-3d:active:not([disabled]) {
+	transform: scale(0.96);
+}
+
+.modal-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 2rem;
+	contain: strict;
+	overflow: auto;
+	overscroll-behavior: contain;
+	scrollbar-gutter: stable;
+}
+
+.playing-card {
+	position: relative;
+	width: 8rem;
+	height: auto;
+	border-radius: 0.5rem;
+	aspect-ratio: 1 / 1.4;
+	transform-style: preserve-3d;
+}
+.playing-card .playing-card-count {
+	position: absolute;
+	top: -1rem;
+	right: -1rem;
+	display: flex;
+	width: 2.5rem;
+	height: 2.5rem;
+	align-items: center;
+	justify-content: center;
+	font-weight: 400;
+	font-size: 1.5rem;
+	box-shadow: 0 0 1px #000, 0 0px 6px rgba(0,0,0, 0.4), 0 0 3px #9b934e inset;
+	background-color: #fff;
+	border-radius: 100%;
+	color: #673315;
+	perspective: 800px;
+}
+.playing-card .back, .playing-card .front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	transition: 0.3s cubic-bezier(0.66, 0.32, 0, 1) transform;
+	transform-style: preserve-3d;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: inherit;
+	box-shadow: 0 0 1px #000, 0 2px 5px #000, 0 4px 16px #000, 0 0 1px #514c23 inset;
+	image-rendering: crisp-edges;
+}
+.playing-card .back {
+	transform: rotateY(180deg);
+}
+.playing-card.flipped .front {
+	transform: rotateY(-180deg);
+}
+.playing-card.flipped .back {
+	transform: rotateY(0deg);
+}
