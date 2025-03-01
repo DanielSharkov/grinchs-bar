@@ -73,7 +73,7 @@ $:gameNotStartable = $GrinchsBar.players.length < 2 || $GrinchsBar.players.some(
 			<div class="header" in:gameLogoInAnim|global>
 				<div id="GameLogo">
 					<h1>Grinch's Bar</h1>
-					<img src="/banner.png" alt="banner">
+					<img src="banner.png" alt="banner">
 				</div>
 			</div>
 
@@ -160,7 +160,7 @@ $:gameNotStartable = $GrinchsBar.players.length < 2 || $GrinchsBar.players.some(
 		0 2px 5px #000,
 		0 2px 5px #000,
 		0 4px 16px #000;
-	background-image: url('/paperboard_background.jpg');
+	background-image: url('paperboard_background.jpg');
 	background-repeat: repeat-y;
 	background-size: 100% auto;
 	background-position: 0 0;

@@ -111,7 +111,7 @@ function devilCardZoomAnim(_: Element): TransitionConfig {
 				in:liarHandZoomAnim|global
 				out:fade|global={{ duration: 500 }}
 				on:introend={() => setTimeout(() => liarHandVisible.set(false), 1500)}>
-					<img src="/liar_hand.png" alt="Liar!" />
+					<img src="liar_hand.png" alt="Liar!" />
 				</div>
 			</div>
 		{/if}
@@ -130,7 +130,7 @@ function devilCardZoomAnim(_: Element): TransitionConfig {
 		{#if $revolverChamberVisible}
 			<div id="RevolverChamber" class="action-container">
 				<div class="img-wrapper" in:zoomAnim|global={{ duration: 500 }}>
-					<img src="/revolver_chamber.png" alt="banner"/>
+					<img src="revolver_chamber.png" alt="banner"/>
 				</div>
 				<div class="flash" use:flashScreen></div>
 			</div>

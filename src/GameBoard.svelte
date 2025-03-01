@@ -140,7 +140,7 @@ function playerWonAnim(playerCardEl: HTMLElement, { isWinner, playerIndex }: { i
 				on:click={()=> playerSelected(playerIndex)}
 				class:dead={isDead}
 				disabled={isDead}
-				style:background-image="url('/player{isDead ? '_dead' : ''}.png')"
+				style:background-image="url('player{isDead ? '_dead' : ''}.png')"
 				style:animation-delay="{playerIndex * 30}ms">
 					<div class="border"></div>
 					<span class="player-name">{ player.name }</span>
@@ -152,7 +152,7 @@ function playerWonAnim(playerCardEl: HTMLElement, { isWinner, playerIndex }: { i
 								class:peng={chamberSlot === player.loadedBulletInSlot && chamberSlot <= player.triggers}
 							>
 								{#if chamberSlot === player.loadedBulletInSlot && chamberSlot <= player.triggers}
-									<img src="/boom.png" alt="BOOM" />
+									<img src="boom.png" alt="BOOM" />
 								{/if}
 							</div>
 						{/each}
@@ -176,7 +176,7 @@ function playerWonAnim(playerCardEl: HTMLElement, { isWinner, playerIndex }: { i
 		out:fade|global={{ easing: cubicInOut, duration: 500 }}>
 			<div class="game-winner modal" in:playerPreparationInAnim|global>
 				<div class="player-wrapper">
-					<div class="player" style:background-image="url('/player.png')" in:fade|global={{ delay: 1500, duration: 1 }}>
+					<div class="player" style:background-image="url('player.png')" in:fade|global={{ delay: 1500, duration: 1 }}>
 						<div class="border"></div>
 						<span class="player-name">{ playerWinner.name }</span>
 						<div class="player-revolver-chamber">
@@ -187,12 +187,12 @@ function playerWonAnim(playerCardEl: HTMLElement, { isWinner, playerIndex }: { i
 									class:peng={chamberSlot === playerWinner.loadedBulletInSlot && chamberSlot <= playerWinner.triggers}
 								>
 									{#if chamberSlot === playerWinner.loadedBulletInSlot && chamberSlot <= playerWinner.triggers}
-										<img src="/boom.png" alt="BOOM" />
+										<img src="boom.png" alt="BOOM" />
 									{/if}
 								</div>
 							{/each}
 						</div>
-						<img in:zoomAnim|global={{ delay: 2000, duration: 1000, easing: elasticOut }} class="crown" src='/crown.png' alt="crown">
+						<img in:zoomAnim|global={{ delay: 2000, duration: 1000, easing: elasticOut }} class="crown" src='crown.png' alt="crown">
 					</div>
 				</div>
 				<div class="actions">
@@ -385,7 +385,7 @@ function playerWonAnim(playerCardEl: HTMLElement, { isWinner, playerIndex }: { i
 	line-height: 1;
 	text-shadow: 0 1px 2px #39361a, 0 2px 10px #59542a;
 	box-shadow: 0 0 3px #7b7336 inset, 0 1px 2px #857e4e, 0 2px 10px #59542a;
-	background-image: url('/player_name_bg.png');
+	background-image: url('player_name_bg.png');
 	background-size: 200%;
 	background-position: center;
 }
@@ -458,7 +458,7 @@ function playerWonAnim(playerCardEl: HTMLElement, { isWinner, playerIndex }: { i
 		0 2px 5px #000,
 		0 2px 5px #000,
 		0 4px 16px #000;
-	background-image: url('/paperboard_background.jpg');
+	background-image: url('paperboard_background.jpg');
 	background-repeat: repeat-y;
 	background-size: 100% auto;
 	background-position: 0 0;
