@@ -385,7 +385,7 @@ function playerWonAnim(playerCardEl: HTMLElement, { isWinner, playerIndex }: { i
 	line-height: 1;
 	text-shadow: 0 1px 2px #39361a, 0 2px 10px #59542a;
 	box-shadow: 0 0 3px #7b7336 inset, 0 1px 2px #857e4e, 0 2px 10px #59542a;
-	background-image: url('/player_name_bg.png');
+	background-image: url('../player_name_bg.png');
 	background-size: 200%;
 	background-position: center;
 }
@@ -458,7 +458,7 @@ function playerWonAnim(playerCardEl: HTMLElement, { isWinner, playerIndex }: { i
 		0 2px 5px #000,
 		0 2px 5px #000,
 		0 4px 16px #000;
-	background-image: url('/paperboard_background.jpg');
+	background-image: url('../paperboard_background.jpg');
 	background-repeat: repeat-y;
 	background-size: 100% auto;
 	background-position: 0 0;
